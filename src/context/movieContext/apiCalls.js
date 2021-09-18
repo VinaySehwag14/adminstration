@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API } from "../../../backend";
 import {
   createMovieFailure,
   createMovieStart,
@@ -14,7 +15,7 @@ import {
 export const getMovies = async (dispatch) => {
   dispatch(getMoviesStart());
   try {
-    const res = await axios.get("/movies", {
+    const res = await axios.get(`${API}/movies`, {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
@@ -29,7 +30,7 @@ export const getMovies = async (dispatch) => {
 export const createMovie = async (movie, dispatch) => {
   dispatch(createMovieStart());
   try {
-    const res = await axios.post("/movies", movie, {
+    const res = await axios.post(`${API}/movies`, movie, {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
@@ -44,7 +45,7 @@ export const createMovie = async (movie, dispatch) => {
 export const deleteMovie = async (id, dispatch) => {
   dispatch(deleteMovieStart());
   try {
-    await axios.delete("/movies/" + id, {
+    await axios.delete(`${API}/movies` + id, {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
