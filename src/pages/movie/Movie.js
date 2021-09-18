@@ -57,11 +57,7 @@ export default function Movie() {
           </div>
           <div className="productFormRight">
             <div className="productUpload">
-              <img
-                src={movie.img}
-                alt=""
-                className="productUploadImg"
-              />
+              <img src={movie.img} alt="" className="productUploadImg" />
               <label for="file">
                 <Publish />
               </label>

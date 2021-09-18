@@ -20,7 +20,6 @@ export const getMovies = async (dispatch) => {
       },
     });
     dispatch(getMoviesSuccess(res.data));
-    console.log(res.data);
   } catch (err) {
     dispatch(getMoviesFailure());
   }
