@@ -1,6 +1,5 @@
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
-import "../src/app.css";
 import Home from "./pages/home/Home";
 import {
   BrowserRouter as Router,
