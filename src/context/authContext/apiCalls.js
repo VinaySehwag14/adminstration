@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API } from "../../../backend";
+import { API } from "../../backend";
 import { loginFailure, loginStart, loginSuccess } from "./AuthActions";
 
 export const login = async (user, dispatch) => {

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API } from "../../../backend";
+import { API } from "../../backend";
 import {
   createMovieFailure,
   createMovieStart,

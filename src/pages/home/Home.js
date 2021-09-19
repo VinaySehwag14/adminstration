@@ -6,7 +6,7 @@ import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
-import { API } from "../../../backend";
+import { API } from "../../backend";
 
 export default function Home() {
   const MONTHS = useMemo(
